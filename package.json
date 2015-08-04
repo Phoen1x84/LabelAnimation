@@ -1,0 +1,30 @@
+{
+  "name": "LabelAnimation",
+  "version": "1.0.0",
+  "description": "Simply add a surrounding element with a class name of 'input-wrap' then add a class to your input textarea etc... of 'input-wrap__field' and you should see some sweet animation You can see this working in action via my codepen http://codepen.io/Phoen1x84/pen/dowJVR/ please share and heart if you like it :)",
+  "main": "gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Phoen1x84/LabelAnimation.git"
+  },
+  "author": "@pho3n1x84 - Matthew Neil",
+  "license": "(MIT)",
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "grunt": "~0.4.5",
+    "grunt-browser-sync": "~2.1.3",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-cssmin": "~0.13.0",
+    "grunt-contrib-jshint": "~0.11.2",
+    "grunt-contrib-less": "~1.0.1",
+    "grunt-contrib-uglify": "~0.9.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-postcss": "^0.5.5",
+    "load-grunt-config": "~0.17.1"
+  },
+  "dependencies": {
+    "jshint-stylish": "^1.0.1",
+    "time-grunt": "^1.0.0"
+  }
+}

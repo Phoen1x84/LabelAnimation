@@ -1,0 +1,78 @@
+@import "assets/less/utilities/_normalize.less";
+// Notes
+// #1 will only work in IE8> 
+
+@border:#c2c2c2; 
+
+// mixins
+.input-style(@radius:5px, @pad:12px, @border-color:#c2c2c2){
+  border-radius:@radius; // #1 
+  background-color:transparent;
+  padding:@pad;
+  border:1px solid @border-color;
+}
+ 
+// This is just to center the form 
+.center-form {
+  margin:20px auto;
+  width:25%;
+}
+
+.form {
+  ul {
+    margin:0;  
+    padding:0;    
+  }
+  
+  li {
+    list-style-type:none;
+    margin:40px 0;    
+  }
+  label{
+    display:block;
+    margin:0 0 10px 5px;
+  }
+}
+
+// if js enabled a class is added to html
+.js {
+  .input-wrap {
+    position:relative;
+
+    label {
+      color:#c2c2c2;    
+      position:absolute;
+      top:0.8em;     
+      transition:all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform:translate3d(0, 0, 0);
+      z-index:-1;
+    }
+
+    input, textarea {
+      &:focus, &.valid {
+        ~ label {
+          color:#000;
+          transform:translate3d(0, -2.2em, 0);
+        }
+      }
+    }
+  }
+}
+
+input {
+  &[type="email"],
+  &[type="text"]
+  {    
+     box-sizing:border-box; // #1
+     width:100%;
+    .input-style();
+  }
+}
+
+textarea {
+  box-sizing:border-box; // #1
+  width:100%;
+  min-height:100px;
+  resize:none;
+  .input-style();
+}
